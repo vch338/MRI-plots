@@ -6,57 +6,57 @@ dflt_color_dev  = '#2E6DA4'     # bluish
 groups = \
 [
     {
-        'color_dev': '#5cb85c',     # greenish
-        'White matter':
+        'color_dev': '#2E6DA4',     # bluish
+        'Cortex' :
         [
             {
-                'Frontal': [ 'RightInsulaWhiteMatter', 'RightFrontalWhiteMatter', 'LeftFrontalWhiteMatter' ],
+                'Frontal': [ 'Frontallobevolume' ],
+            },
+            {
+                'Cingulate': [ 'Cingulatevolume' ],
+            },
+            {
+                'Temporal': [ 'Temporallobevolume' ],
+            },
+            {
+                'Insula': [ 'Insulavolume' ],
+            },
+            {
+                'Parietal': [ 'Parietallobevolume' ],
+            },  
+            {
+                'Occipital': [ 'Occipitallobevolume' ],
+            },
+	   ],
+    },
+    {
+        'color_dev': '#5cb85c',     # greenish
+        'White matter':
+        [   
+            {
+                'Frontal': [ {'RightFrontalWhiteMatter':'R'}, {'LeftFrontalWhiteMatter':'L'} ],
 
                 # Override default group color for each subgroup like this:
                 #   'color_dev': '#5cb85c',      # greenish
                 #   'color_norm': '#5cb85c',     # greenish
             },
             {
-                'Temporal': [ 'RightTemporalWhiteMatte', 'LeftTemporalWhiteMatter' ],
-            },
-            {
-                'Parietal': [ 'RightParietalWhiteMatter', 'LeftParietalWhiteMatter' ],
-            },
-            {
-                'Occipital': [ 'RightOccipitalWhiteMatter', 'LeftOccipitalWhiteMatter' ],
-            },
-            {
-                'Insula': [ 'LeftInsulaWhiteMatter' ],
-            },
-            {
-                'Cingulate': [ 'RightCingulateWhiteMatter', 'LeftCingulateWhiteMatter' ],
+                'Cingulate': [ {'RightCingulateWhiteMatter':'R'}, {'LeftCingulateWhiteMatter':'L'} ],
             },
             {
                 'Corpus\nCallosum': [ 'CorpusCallosum' ], 
-            }
-        ],
-    },
-    {
-        'color_dev': '#d9534f',     # redish
-        'Cerebellum':
-        [
-            {
-                'Vermis': [ 'Vermis' ],
             },
             {
-                'Deep nuclei': [ 'Deep_nuclei' ],
+                'Temporal': [ {'RightTemporalWhiteMatte':'R'}, {'LeftTemporalWhiteMatte':'L'} ],
+            },
+            { 
+                'Insula': [ {'RightInsulaWhiteMatter':'R'}, {'LeftInsulaWhiteMatter':'L'} ],
             },
             {
-                'Anterior': [ 'Anterior' ],
+                'Parietal': [ {'RightParietalWhiteMatter':'R'}, {'LeftParietalWhiteMatter':'L'} ],
             },
             {
-                'Posterior': [ 'Posterior' ],
-            },
-            {
-                'Superior Posterior': [ 'Superior_Posterior' ],
-            },
-            {
-                'Inferior Posterior': [ 'Inferior_Posterior' ],
+                'Occipital': [ {'RightOccipitalWhiteMatter':'R'}, {'LeftOccipitalWhiteMatter':'L'} ],
             },
         ],
     },
@@ -65,62 +65,62 @@ groups = \
         'Subcortical Regions' :
         [
             {
-                'Accumbens': [ 'RightAccumbensArea', 'LeftAccumbensArea' ],
+                'Caudate': [ {'RightCaudate':'R'}, {'LeftCaudate':'L'} ],
             },
             {
-                'Amygdala': [ 'RightAmygdala', 'LeftAmygdala' ],
+                'Accumbens': [ {'RightAccumbensArea':'R'}, {'LeftAccumbensArea':'L'} ],
+            },
+            {  
+                'Putamen': [ {'RightPutame':'R'}, {'LeftPutame':'L'} ],
+            },
+            {
+                'Pallidum': [ {'RightPallidum':'R'}, {'LeftPallidum':'L'} ],
+            },
+            {    
+                'Basal\nForebrain': [  {'Right Basal Forebrain':'R'}, {'Left Basal Forebrain':'L'} ],
+            },
+            {
+                'Amygdala': [ {'RightAmygdala':'R'}, {'LeftAmygdala':'L'} ],
+            },
+            {
+                'Hippocampus': [ {'RightHippocampus':'R'}, {'LeftHippocampus':'L'} ],
+            },
+            {
+                'Ventral DC': [ {'Right Ventral DC':'R'}, {'Left Ventral DC':'L'} ],
+            },
+            {
+                'Thalamus': [ {'RightThalamusProper':'R'}, {'LeftThalamusProper':'L'} ],
+            },
+            {
+                'Brain Stem': [ 'BrainStem' ],
             },
             {
                 'Pons': [ 'Pons' ],
             },
-            {
-                'BrainStem': [ 'BrainStem' ],
-            },
-            {
-                'Caudate': [ 'RightCaudate', 'LeftCaudate' ],
-            },
-            {
-                'Hippocampus': [ 'RightHippocampus', 'LeftHippocampus' ],
-            },
-            {
-                'Pallidum': [ 'RightPallidum', 'LeftPallidum' ],
-            },
-            {
-                'Putame': [ 'RightPutame', 'LeftPutamen' ],
-            },
-            {
-                'Thalamus': [ 'RightThalamusProper', 'LeftThalamusProper' ],
-            },
-            {
-                'Ventral DC': [ 'Right Ventral DC', 'Left Ventral DC' ],
-            },
-            {
-                'Basal\nForebrain': [ 'Left Basal Forebrain', 'Right Basal Forebrain' ],
-            },
         ],
     },
     {
-        'color_dev': '#2E6DA4',     # bluish
-        'Cortical Regions' :
+        'color_dev': '#d9534f',     # redish
+        'Cerebellum':
         [
             {
-                'Frontal': [ 'Frontallobevolume', 'FRP' ],
+                'Anterior': [ 'Anterior' ],
             },
             {
-                'Temporal': [ 'Temporallobevolume' ],
+                'Superior Posterior': [ 'Superior_Posterior' ],
             },
             {
-                'Parietal': [ 'Parietallobevolume' ],
+                'Posterior': [ 'Posterior' ],
             },
             {
-                'Occipital': [ 'Occipitallobevolume' ],
+                'Inferior Posterior': [ 'Inferior_Posterior' ],
             },
             {
-                'Cingulate': [ 'Cingulatevolume' ],
+                'Vermis': [ 'Vermis' ],
             },
             {
-                'Insula': [ 'Insulavolume' ],
-            }
+                'Deep nuclei': [ 'Deep_nuclei' ],
+            },
         ],
     },
 ]
@@ -137,7 +137,10 @@ csv.register_dialect('tab', delimiter='\t', quoting=csv.QUOTE_NONE)
 def usage():
     print 'Usage: polar-mri.py [OPTIONS] <in.txt> <out.png|pdf|svgz>'
     print 'Options:'
-    print '   -a, --abs-dev         Preserve sign of the deviation'
+    print '   -a, --abs-dev             Preserve sign of the deviation'
+    print '   -c, --config <file>       Config file'
+    print '   -d, --deviation <num>     Highlight deviations bigger than this [0.05]'
+    print '   -h, --help                This help message'
     sys.exit(1)
 
 def usage_example():
@@ -149,16 +152,27 @@ def usage_example():
 abs_dev  = False
 in_file  = None
 out_file = None
+config   = None
+dev      = 0.05
 if len(sys.argv) < 2: usage()
 args = sys.argv[1:]
 while len(args):
     if args[0]=='-a' or args[0]=='--abs-dev': 
         abs_dev = True
+    elif args[0]=='-?' or args[0]=='-h' or args[0]=='--help': 
+        usage()
+    elif args[0]=='-c' or args[0]=='--config': 
+        args = args[1:]
+        config = args[0]
+    elif args[0]=='-d' or args[0]=='--deviation': 
+        args = args[1:]
+        dev  = float(args[0])
     elif in_file == None: in_file = args[0]
     elif out_file == None: out_file = args[0]
     else: usage()
     args = args[1:]
 
+if config!=None: execfile(config)
 lines = open(in_file, 'rb').readlines()
 
 if len(lines) != 2: 
@@ -187,13 +201,14 @@ for i in range(len(all_cols)):
     else: val = 1 - abs(val)
     cols_hash[key] = val
 
-ltmp  = []  # labels, can repeat multiple times
-lbls  = []
-xlbls = []
-xvals = []
-yvals = []
-cols  = []
-sgrp  = []
+ltmp   = []  # labels, can repeat multiple times
+lbls   = []
+xlbls  = []
+lbls2  = []
+xvals  = []
+yvals  = []
+cols   = []
+sgrp   = []
 for hash in groups:
     color_dev  = dflt_color_dev
     color_norm = dflt_color_norm
@@ -205,7 +220,15 @@ for hash in groups:
         for shash in hash[grp]:
             for key in shash:
                 for column in shash[key]:
+                    lbl2 = None
+                    if type(column).__name__ == 'dict':
+                        for cname in column:
+                            #if key=='Thalamus' or key=='Parietal' or key=='Pallidum' or key=='Putame': lbl2 = column[cname]
+                            lbl2 = column[cname]
+                            column = cname
+                            break
                     if column not in cols_hash: continue
+                    lbls2.append(lbl2)
                     ltmp.append(key)
                     yvals.append(cols_hash[column])
                     sgrp.append(grp)
@@ -243,7 +266,7 @@ ax.axes.get_xaxis().grid(False)
 #ax.grid(False)
 ax.spines['polar'].set_visible(False)       # do not draw axis border
 ax.set_xticks([])
-ax.set_rlabel_position(0)
+#ax.set_rlabel_position(0)
 ax.tick_params(axis='both', which='major', labelsize=9)
 
 # Highlight tick at 1?
@@ -266,14 +289,18 @@ for i in range(len(yvals)):
     ax.plot(np.linspace(beg, end, 10), np.ones(10), color=cols[i][0], linestyle='-', linewidth=4)
     leg[cols[i][0]] = sgrp[i]
 
+# Legend
 leg_rect = []
 leg_lbl  = []
 for col in leg:
     rect = patches.Rectangle((0,0), 0.1, 0.1, color=col)
     leg_rect.append(rect)
     leg_lbl.append(leg[col])
+leg_rect.append(patches.Rectangle((0,0), 0.1, 0.1, color='grey', alpha=0.4))
+leg_lbl.append('Not statistically significant')
 plt.legend(leg_rect,leg_lbl,prop={'size':9},frameon=False,bbox_to_anchor=(0.98,0.98),bbox_transform=plt.gcf().transFigure)
 
+# Radial text labels
 for i in range(len(xlbls)):
     angle_rad = xlbls[i]
     angle_deg = angle_rad*180/np.pi
@@ -282,11 +309,20 @@ for i in range(len(xlbls)):
     if angle_rad > np.pi/2 and angle_rad < np.pi*3/2.: 
         ha  = "right"
         rot = angle_deg - 180
-    plt.text(angle_rad, yticks[-1]+0.1, lbls[i], size=9, horizontalalignment=ha, 
+    plt.text(angle_rad, yticks[-1]+0.05, lbls[i], size=9, horizontalalignment=ha, 
         verticalalignment="center", rotation=rot, rotation_mode='anchor')
 
+# L/R sub-labels
+for i in range(len(lbls2)):
+    if lbls2[i]==None: continue
+    angle_rad = i*width+width*0.5
+    angle_deg = angle_rad*180/np.pi - 90
+    ha  = "left"
+    rot = angle_deg
+    plt.text(angle_rad, yticks[-1]-0.08, lbls2[i], size=9, horizontalalignment=ha, verticalalignment="center", rotation=rot, rotation_mode='anchor',color='#555555')
+
 for x,y,color,bar in zip(xvals, yvals, cols, bars):
-    if abs(y-1) > 0.05:
+    if abs(y-1) > dev:
         bar.set_facecolor(color[0])
         bar.set_edgecolor(color[0])
         bar.set_alpha(0.7)
